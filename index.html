@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Big Five Personality Test</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="top"><div class="eyebrow">Self-reflection quiz</div><h1>Big Five Personality Test</h1><p>Explore five broad personality traits through a quick 20-question assessment.</p></header>
+    <section class="panel" id="welcome">
+      <h2>Welcome!</h2><p>Answer each statement based on how well it describes you. There are no right or wrong answers.</p>
+      <label class="field-label" for="name">Your name (optional)</label><input id="name" maxlength="70" placeholder="Enter your name" autocomplete="name">
+      <p class="note">Your answers are processed only in this browser. No account or database is required. This short quiz is for self-reflection, not clinical diagnosis or a validated psychological assessment.</p>
+      <div class="actions"><button id="start" type="button">Start Test →</button></div>
+    </section>
+    <section class="panel hidden" id="quiz" aria-live="polite">
+      <div class="counter" id="counter"></div><div class="progress" aria-label="Quiz progress"><div id="progress"></div></div>
+      <p class="question" id="question"></p><div class="answers" id="answers"></div>
+      <p class="error" id="error" role="alert"></p>
+      <div class="actions"><button type="button" class="secondary" id="previous">← Previous</button><button type="button" id="next">Next →</button></div>
+    </section>
+    <section class="panel hidden" id="results">
+      <h2 id="result-title">Your Personality Results</h2><p class="note">Scores are shown on a 0–100 scale. Higher values indicate stronger agreement with statements associated with each trait, not better or worse personality.</p>
+      <div id="scores"></div><div class="actions"><button type="button" id="print">Print Results</button><button type="button" class="secondary" id="restart">Take Again</button></div>
+    </section>
+    <div class="footer">Simple Big Five Personality Test · Offline-friendly · No data collection</div>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
